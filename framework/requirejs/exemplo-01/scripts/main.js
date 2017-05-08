@@ -1,16 +1,12 @@
 requirejs.config({
     paths: {
-        "jquery": [
-            "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min",
-            "lib/jquery-1.10.2"
-        ]
+        "jquery": "lib/jquery-3.2.1.min"
     }
 });
 
 require(["jquery"], function ($) {
     var $form = $("#form"),
             $email = $("#email");
-
     $form.on("submit", function (e) {
         e.preventDefault();
         require(["lib/validation-plugin"], function () {
@@ -21,7 +17,6 @@ require(["jquery"], function ($) {
             }
         });
     });
-
     $email.on("keyup", function () {
         $email.removeClass("error");
     });
