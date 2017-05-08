@@ -1,11 +1,28 @@
-require.config({
-    name: 'app',
-    baseUrl: 'assets/js',
+requirejs.config({
     paths: {
-        'jquery': 'libs/jquery-3.2.1.min'
+        "jquery": [
+            "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min",
+            "lib/jquery-1.10.2"
+        ]
     }
 });
 
-require(['jquery'], function ($) {
-    $('body').append('String invocada');
+require(["jquery"], function ($) {
+    var $form = $("#form"),
+            $email = $("#email");
+
+    $form.on("submit", function (e) {
+        e.preventDefault();
+        require(["lib/validation-plugin"], function () {
+            if ($email.isValidEmail()) {
+                $form.get(0).submit();
+            } else {
+                $email.addClass("error").focus();
+            }
+        });
+    });
+
+    $email.on("keyup", function () {
+        $email.removeClass("error");
+    });
 });
