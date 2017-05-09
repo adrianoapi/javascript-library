@@ -11,7 +11,7 @@
         <script>
            var AppView = Backbone.View.extend({
                el: $('body'),
-               template: _.template("<h1>Hello <%= who %></h1>"),
+               template: _.template("<h1>Hello <%=who%></h1>"),
                initialize: function(){
                    this.render();
                },
