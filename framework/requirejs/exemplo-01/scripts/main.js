@@ -9,6 +9,9 @@ require(["jquery"], function ($) {
             $email = $("#email");
     $form.on("submit", function (e) {
         e.preventDefault();
+        require(["api/default-class"], function(){
+            
+        });
         require(["lib/validation-plugin"], function () {
             if ($email.isValidEmail()) {
                 $form.get(0).submit();
