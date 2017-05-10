@@ -12,7 +12,7 @@ require(["jquery", "Pessoa"], function ($, Pessoa) {
             $email = $("#email"),
             nome = Pessoa.prototype.getName();
     console.log(nome);
-
+    
     $form.on("submit", function (e) {
         e.preventDefault();
         require(["lib/validation-plugin"], function () {
