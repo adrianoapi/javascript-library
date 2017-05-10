@@ -11,7 +11,7 @@ Para isso estou tentando juntar e organizar da melhor maneira possível os exemp
 * `underscoreJS` Framework JS.
 * `backboneJS` Fornece o padrão MVC para o código javascript, que funciona em harmonia com a orientação à objetos.
 
-Exemplo de backboneJS:
+Exemplo de backboneJS com jQuery:
 
 ```javascript
 var HelloView = Backbone.View.extend({
