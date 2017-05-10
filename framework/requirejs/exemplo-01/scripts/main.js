@@ -7,10 +7,12 @@ requirejs.config({
 
 require(["jquery", "Pessoa"], function ($, Pessoa) {
     Pessoa.prototype.setName('Adriano');
-    var nome = Pessoa.prototype.getName();
-    console.log(nome);
+
     var $form = $("#form"),
-            $email = $("#email");
+            $email = $("#email"),
+            nome = Pessoa.prototype.getName();
+    console.log(nome);
+
     $form.on("submit", function (e) {
         e.preventDefault();
         require(["lib/validation-plugin"], function () {

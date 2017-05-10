@@ -1,17 +1,16 @@
 define('Pessoa', [], function () {
 
-    // constructor
-    var Pessoa = function (name) {
-        this.name = name;
-        this._age = 0;
+    // Constructor
+    var Pessoa = function () {
+        this._name;
     };
 
     Pessoa.prototype.setName = function (value) {
-        this.name = value;
+        this._name = value;
     };
 
     Pessoa.prototype.getName = function () {
-        return this.name;
+        return this._name;
     };
 
     return Pessoa;
