@@ -1,5 +1,8 @@
 # javascript-library
 
+Estou disponibilizando aos poucos um conteúdo abrangente de JavaScript, com o intuito de facilitar e agilizar o desenvolvimento de aplicações e afins que utilizam a tecnologia. Afinal, são inúmeras os frameworks e classes que são geradas e adotadas no mercado para esta tecnologia, é algo muito recorrente, o que torna um pouco maçante a pesquisa de um e outro.
+Para isso estou tentando juntar e organizar da melhor maneira possível os exemplos e suas melhores práticas de utilização.
+
 ## Framework
 
 * `jQuery` Framework JS.
