@@ -2,21 +2,13 @@
 
 ## Framework
 
-### jQuery
-Framework JS
+* `jQuery` Framework JS.
+* `angularJS` Framework JS.
+* `requireJS` Framework JS para gerenciamento de dependências.
+* `underscoreJS` Framework JS.
+* `backboneJS` Fornece o padrão MVC para o código javascript, que funciona em harmonia com a orientação à objetos.
 
-### angularJS
-Framework JS
-
-### requireJS
-Framework JS
-
-### underscoreJS
-Framework JS
-
-### backboneJS
-
-Fornece o padrão MVC para o código javascript, que funciona em harmonia com a orientação à objetos.
+Exemplo de backboneJS:
 
 ```javascript
 var HelloView = Backbone.View.extend({
