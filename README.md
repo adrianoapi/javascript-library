@@ -1,5 +1,7 @@
 # javascript-library
 
+## jQuery
+## angularJS
 ## requireJS
 ## underscoreJS
 ## backboneJS
