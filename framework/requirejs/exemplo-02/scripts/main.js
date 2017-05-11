@@ -14,13 +14,13 @@ require(['Human', 'John'], function (Human, John) {
     var human = new Human('Peter');
     console.log(human.name); // Peter
     console.log(human.walk()); // Peter is walking
-    console.log(human.getAge()); // 0
+    console.log(human.getAge());
 
 
     var john = new John();
-    console.log(john.name); // John
-    console.log(john.walk()); // John is walking quickly
-    console.log(john.getAge()); // 28
-    console.log(john.getNumEyes()); // 2
+    console.log(john.name);
+    console.log(john.walk());
+    console.log(john.getAge());
+    console.log(john.getNumEyes());
 
 });

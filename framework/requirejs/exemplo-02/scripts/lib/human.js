@@ -10,7 +10,7 @@ define('Human', [], function () {
         this.name = name;
 
         // pseudo-protected var
-        this._age = 0;
+        this._age = 29;
     };
 
     // instance method
