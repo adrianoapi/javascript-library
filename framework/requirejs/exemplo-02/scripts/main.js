@@ -1,29 +1,26 @@
 requirejs.config({
     paths: {
-        "jquery": "lib/jquery-3.2.1.min",
-        "Pessoa": "lib/pessoa"
+        "Human": "lib/human",
+        "John": "lib/john"
     }
 });
 
-require(["jquery", "Pessoa"], function ($, Pessoa) {
-    Pessoa.prototype.setName('Adriano');
+require(['Human', 'John'], function (Human, John) {
 
-    var $form = $("#form"),
-            $email = $("#email"),
-            nome = Pessoa.prototype.getName();
-    console.log(nome);
-    
-    $form.on("submit", function (e) {
-        e.preventDefault();
-        require(["lib/validation-plugin"], function () {
-            if ($email.isValidEmail()) {
-                $form.get(0).submit();
-            } else {
-                $email.addClass("error").focus();
-            }
-        });
-    });
-    $email.on("keyup", function () {
-        $email.removeClass("error");
-    });
+    console.log(Human.GET_TYPE()); // biped
+    console.log(Human.NUM_LEGS); // 2
+
+
+    var human = new Human('Peter');
+    console.log(human.name); // Peter
+    console.log(human.walk()); // Peter is walking
+    console.log(human.getAge()); // 0
+
+
+    var john = new John();
+    console.log(john.name); // John
+    console.log(john.walk()); // John is walking quickly
+    console.log(john.getAge()); // 28
+    console.log(john.getNumEyes()); // 2
+
 });
