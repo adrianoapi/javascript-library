@@ -43,8 +43,10 @@
                     }
                 ]
             }
-            
-            console.log(jossWhedon);
+            var i = jossWhedon.shows.map(function (show) {
+                return show.title;
+            });
+            console.log(i[2]);
         </script>
     </body>
 </html>
