@@ -51,13 +51,22 @@
             console.log(char[2][1]['name']); // Angel
 
             console.log((jossWhedon.shows, "title")); // Firefly
-            
+
             // Find where
-            for(var i =0; i < jossWhedon.shows.length; i++){
-                if(jossWhedon.shows[i].title === "Firefly"){
+            // sem underscore
+            for (var i = 0; i < jossWhedon.shows.length; i++) {
+                if (jossWhedon.shows[i].title === "Firefly") {
                     console.log(jossWhedon.shows[i]);
                 }
             }
+
+            // com underscore
+            console.log(_.findWhere(jossWhedon.shows, {title: "Firefly"}));
+
+            // Reduce
+            _.reduce(jossWhedon.shows, function (memo, show) {
+                return memo.concat(show.characters);
+            }, []);
 
         </script>
     </body>
