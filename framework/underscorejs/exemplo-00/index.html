@@ -50,8 +50,14 @@
             });
             console.log(char[2][1]['name']); // Angel
 
-            var title = _.pluck(jossWhedon.shows, "title");
-            console.log(title[3]); // Firefly
+            console.log((jossWhedon.shows, "title")); // Firefly
+            
+            // Find where
+            for(var i =0; i < jossWhedon.shows.length; i++){
+                if(jossWhedon.shows[i].title === "Firefly"){
+                    console.log(jossWhedon.shows[i]);
+                }
+            }
 
         </script>
     </body>
