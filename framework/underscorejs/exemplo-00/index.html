@@ -68,6 +68,14 @@
                 return memo.concat(show.characters);
             }, []);
 
+            // Filtro padrão
+            jossWhedon.shows.filter(function (show) {
+                return show.femaleLead;
+            }).map(function (show) {
+                return show.title;
+            });
+
+
         </script>
     </body>
 </html>
