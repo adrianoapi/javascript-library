@@ -75,6 +75,11 @@
                 return show.title;
             });
 
+            // com underscore
+            _.pluck(_.filter(jossWhedon.shows, function (show) {
+                return show.femaleLead;
+            }), "title");
+
 
         </script>
     </body>
