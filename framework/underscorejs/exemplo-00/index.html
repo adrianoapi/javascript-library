@@ -81,6 +81,15 @@
             }), "title");
 
 
+            // Count caracters JS
+            jossWhedon.shows.reduce(function (memo, show) {
+                show.characters.forEach(function (character) {
+                    (!memo[character.role]) ? memo[character.role] = 1 : memo[character.role]++;
+                });
+                return memo;
+            }, {});
+
+
         </script>
     </body>
 </html>
