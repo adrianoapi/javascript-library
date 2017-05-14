@@ -89,6 +89,9 @@
                 return memo;
             }, {});
 
+            // count underscore
+            _.countBy(_.flatten(_.pluck(jossWhedon.shows, "characters")), "role");
+
 
         </script>
     </body>
