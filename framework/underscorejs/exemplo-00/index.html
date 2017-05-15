@@ -93,6 +93,35 @@
             _.countBy(_.flatten(_.pluck(jossWhedon.shows, "characters")), "role");
 
 
+            var isMadScientist = function (character) {
+                return character.role === "mad scientist"
+            };
+
+            jossWhedon.shows.reduce(function (memo, show) {
+                if (show.characters.some(isMadScientist)) {
+                    show.characters.forEach(function (character) {
+                        if (isMadScientist(character)) {
+                            memo[show.title] = character.name;
+                        }
+                    });
+                }
+
+                return memo;
+            }, {});
+
+            var isMadScientist = function (character) {
+                return character.role === "mad scientist"
+            };
+
+            _.reduce(jossWhedon.shows, function (memo, show) {
+                if (_.some(show.characters, isMadScientist)) {
+                    memo[show.title] = _.detect(show.characters, isMadScientist).name;
+                }
+
+                return memo;
+            }, {});
+
+
         </script>
     </body>
 </html>
