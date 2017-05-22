@@ -13,11 +13,33 @@ and open the template in the editor.
     <body>
 
         <h1>jQuery</h1>
+        Instanciando
+        <pre>
+        $(document).ready(function() {
+            
+            // code
+
+        });
+        </pre>
+
         Manipulação de .class
         <pre>
             $("p").addClass("myClass yourClass");
             $("p").removeClass("myClass yourClass");
             $("p").removeClass("myClass noClass").addClass("yourClass");
         </pre>
+
+        Select
+        <pre>
+         //Adiciona um valor no select
+         $('select').append($('&lt;option&gt;', {value: 1, text: 'One'}));
+
+         //Limpa o select
+         $('select[name=curso_id]').empty();
+
+         //Seleciona
+         $("select[name=endereco-entrega]").val("valor1").change();
+        </pre>
+
     </body>
 </html>
