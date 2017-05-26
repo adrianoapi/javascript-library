@@ -40,6 +40,22 @@ and open the template in the editor.
          //Seleciona
          $("select[name=endereco-entrega]").val("valor1").change();
         </pre>
+		
+		Manipulação
+		<pre>
+		//tooltip padrao jquery
+        $('#password').tooltip({trigger: 'focus', title: 'Password tooltip'});
+         $("input[name=telefone]").tooltip({trigger: 'focus', title: 'Password tooltip', placement: 'bottom'});
+
+        //fechar modal
+        $('#infoEndereco').modal('toggle');
+
+        //limpar tabela
+        $("#tbody").empty();
+
+        // Pega a primeira linha da tabela
+        var id = $("#tab-cursos tbody tr:first").attr("id");
+		</pre>
 
     </body>
 </html>
